@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="12"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:text="Coordenadas"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="0dp"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+
+        android:background="#707070"
+        />
+
+    <TextView
+        android:id="@+id/txtLatitud"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+    <TextView
+        android:id="@+id/txtLongitud"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+    <TextView
+        android:text="Estado del servicio"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+
+        android:background="#707070"/>
+    <TextView
+        android:id="@+id/txtEstadoServicio"
+        android:text=""
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnIniciar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Iniciar"
+            android:textColor="#ffffff"
+            android:background="#F40A0A"
+            android:onClick="clickIniciar"
+            />
+
+        <Button
+            android:id="@+id/btnDetener"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Detener"
+            android:textColor="#ffffff"
+            android:background="#000000"
+            android:onClick="clickDetener"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:text="Estado de la red"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:background="#707070"/>
+    <TextView
+        android:id="@+id/txtRed"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <TextView
+        android:text="Evidencia"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:background="#707070"/>
+
+    <Button
+        android:id="@+id/btnEvidencia"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:background="#F40A0A"
+        android:onClick="clickTomarEvidencia"
+        android:text="Capturar evidencia" />
+
+
+
+
+
+</LinearLayout>
+

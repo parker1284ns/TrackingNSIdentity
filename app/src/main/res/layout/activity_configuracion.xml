@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="9"
+    tools:context=".ConfiguracionActivity">
+
+    <TextView
+        android:text="Configuración"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:background="#707070"/>
+    <TextView
+        android:text="Key cliente:"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+    <EditText
+        android:id="@+id/txtKey"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="25sp" />
+    <Button
+        android:id="@+id/btnActivar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_weight="1"
+        android:onClick="clickActivar"
+        android:text="Activar" />
+
+    <Button
+        android:id="@+id/btnRegresar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:onClick="clickRegresar"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:text="regresar" />
+
+
+</LinearLayout>

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".CapturaEvidenciaActivity">
+
+    <TextView
+        android:text="Captura de imagenes"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="#FFFFFF"
+        android:background="#707070"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <TextView
+            android:id="@+id/txtEvidencia1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Foto 1:"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+        <ImageView
+            android:layout_width="0dp"
+
+            android:layout_height="match_parent"
+            android:background="@drawable/icpicture"
+            android:layout_weight="2">
+
+
+        </ImageView>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_camera">
+
+        </ImageButton>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:text="Nota:">
+
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#B1B1B1">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <TextView
+            android:id="@+id/txtEvidencia2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Foto 2:"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/icpicture"
+            android:layout_weight="2">
+
+
+        </ImageView>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+
+            android:src="@android:drawable/ic_menu_camera">
+
+        </ImageButton>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"
+        android:text="Nota:">
+
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#B1B1B1">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="5">
+        <TextView
+            android:id="@+id/txtEvidencia3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Foto 3:"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/icpicture"
+            android:layout_weight="2">
+
+
+        </ImageView>
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@android:drawable/ic_menu_camera">
+
+        </ImageButton>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".5"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:text="Nota:">
+
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></EditText>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="#B1B1B1">
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnIngresar"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:background="#F40A0A"
+        android:text="Guardar" />
+
+
+</LinearLayout>
