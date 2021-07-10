@@ -63,10 +63,22 @@ public class LoginActivity extends AppCompatActivity {
         int readexternal = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
         int accesnet = ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_NETWORK_STATE);
         int readphone = ContextCompat.checkSelfPermission(this,Manifest.permission.READ_PHONE_STATE);
+        int camara = ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA);
 
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_PHONE_STATE,Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE
-        ,Manifest.permission.ACCESS_NETWORK_STATE}, 1);
+        ,Manifest.permission.ACCESS_NETWORK_STATE,Manifest.permission.CAMERA}, 1);
 
+        //////////////////////////////////////////////////////////////////////////////////////////////
+        if(camara == PackageManager.PERMISSION_DENIED ){
+
+            if(ActivityCompat.shouldShowRequestPermissionRationale(this,
+                    Manifest.permission.CAMERA)){
+
+            }else {
+                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.CAMERA},
+                        1);
+            }
+        }
         //////////////////////////////////////////////////////////////////////////////////////////////
         if(readphone == PackageManager.PERMISSION_DENIED ){
 

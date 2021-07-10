@@ -103,6 +103,30 @@ public class CallSoap extends CallSoapBase
         return ret;
     }
 
+    public EBreturn SalvaEvidencia(int evidicena_id,String imagen,String nota){
+        String mensaje="";
+
+        pSalvaEvidencia parametros= new pSalvaEvidencia();
+        parametros.evidencia_id = evidicena_id;
+        parametros.imagen = imagen;
+        parametros.nota = nota;
+
+
+        try
+        {
+            mensaje = parametros.JsonSerializa();
+        }
+        catch(Exception ex)
+        {
+            EBreturn reterr= new EBreturn();
+            reterr.SetFail("Error al serializar objeto." , ex.getMessage());
+            return reterr;
+        }
+
+        EBreturn ret= this.ConsultaMetodo("SalvaEvidencia", mensaje, token.get());
+
+        return ret;
+    }
 
     public EBreturn ValidaUsuario(String imei, String nombre_usuario, String contrasena)
     {

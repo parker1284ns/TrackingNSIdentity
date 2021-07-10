@@ -32,8 +32,8 @@
             android:textAlignment="center"
             android:textSize="20sp" />
         <ImageView
+            android:id="@+id/imagen1"
             android:layout_width="0dp"
-
             android:layout_height="match_parent"
             android:background="@drawable/icpicture"
             android:layout_weight="2">
@@ -42,11 +42,12 @@
         </ImageView>
 
         <ImageButton
+            android:id="@+id/btnImagen1"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@android:drawable/ic_menu_camera">
-
+            android:src="@android:drawable/ic_menu_camera"
+            android:onClick="abrirCamara1">
         </ImageButton>
     </LinearLayout>
     <TextView
@@ -59,6 +60,7 @@
 
     </TextView>
     <EditText
+        android:id="@+id/txtNota1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"></EditText>
@@ -84,20 +86,20 @@
             android:textAlignment="center"
             android:textSize="20sp" />
         <ImageView
+            android:id="@+id/imagen2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/icpicture"
             android:layout_weight="2">
-
-
         </ImageView>
 
         <ImageButton
+            android:id="@+id/btnImagen2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-
-            android:src="@android:drawable/ic_menu_camera">
+            android:src="@android:drawable/ic_menu_camera"
+            android:onClick="abrirCamara2">
 
         </ImageButton>
     </LinearLayout>
@@ -112,6 +114,7 @@
 
     </TextView>
     <EditText
+        android:id="@+id/txtNota2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"></EditText>
@@ -137,6 +140,7 @@
             android:textAlignment="center"
             android:textSize="20sp" />
         <ImageView
+            android:id="@+id/imagen3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:background="@drawable/icpicture"
@@ -146,10 +150,13 @@
         </ImageView>
 
         <ImageButton
+            android:id="@+id/btnImagen3"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:src="@android:drawable/ic_menu_camera">
+            android:src="@android:drawable/ic_menu_camera"
+            android:onClick="abrirCamara3">
+            >
 
         </ImageButton>
     </LinearLayout>
@@ -164,6 +171,7 @@
 
     </TextView>
     <EditText
+        android:id="@+id/txtNota3"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"></EditText>
@@ -185,6 +193,7 @@
         android:textColor="#ffffff"
         android:background="#F40A0A"
         android:text="Guardar" />
+
 
 
 </LinearLayout>
