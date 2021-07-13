@@ -21,7 +21,6 @@ import android.widget.Toast;
 import com.nsidentity.tracking.basic.EBreturn;
 import com.nsidentity.tracking.clases.global;
 import com.nsidentity.tracking.clases.objEvidencia;
-import com.nsidentity.tracking.entidades.log_tracking;
 import com.nsidentity.tracking.soap.CallSoap;
 
 import java.io.ByteArrayOutputStream;
@@ -38,7 +37,7 @@ public class CapturaEvidenciaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_captura_evidencia);
-        //Notas
+
         txtNota1 = (EditText) findViewById(R.id.txtNota1);
         txtNota2 = (EditText) findViewById(R.id.txtNota2);
         txtNota3 = (EditText) findViewById(R.id.txtNota3);
@@ -57,9 +56,6 @@ public class CapturaEvidenciaActivity extends AppCompatActivity {
         //objEvidencia objE1= new objEvidencia();
         //objE1.id=1
         //objE1.foto=convertir imagen uno en base64 (debes de hacer pequeña la imagen width 400)
-        //objE1.nota=txtNota1.getText
-        //objE1.imagen = "convertir imagen uno en base64 (debes de hacer pequeña la imagen width 400)";
-
         objEvidencia objE1= new objEvidencia();
         objE1.evidenica_id = 1;
         Bitmap bitmap1 = ((BitmapDrawable) imagen1.getDrawable()).getBitmap();
@@ -141,19 +137,9 @@ public class CapturaEvidenciaActivity extends AppCompatActivity {
         }
 
 
-    }
 
-  /*  public void VerBase64(View  view){
-        Bitmap bitmap1 = ((BitmapDrawable) imagen1.getDrawable()).getBitmap();
-        float proporcionancho = 300 / (float) bitmap1.getWidth();
-        float proporcionalto = 300 / (float) bitmap1.getHeight();
-        Bitmap resize1 = Bitmap.createScaledBitmap(bitmap1,(int) (bitmap1.getWidth()*proporcionancho), (int) (bitmap1.getHeight()*proporcionalto),true);
-        ByteArrayOutputStream b1 = new ByteArrayOutputStream();
-        resize1.compress(Bitmap.CompressFormat.JPEG,70,b1);
-        byte[] imagen1 = b1.toByteArray();
-        String base64 = Base64.encodeToString(imagen1,Base64.DEFAULT);
-        Log.e("Imagen", base64);
-    }*/
+
+    }
 
     public void abrirCamara1(View view){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -253,5 +239,6 @@ public class CapturaEvidenciaActivity extends AppCompatActivity {
         RutaImagen = imagen.getAbsolutePath();
         return imagen;
     }
+
 
 }

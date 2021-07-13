@@ -65,6 +65,7 @@ public class LoginActivity extends AppCompatActivity {
         int readphone = ContextCompat.checkSelfPermission(this,Manifest.permission.READ_PHONE_STATE);
         int camara = ContextCompat.checkSelfPermission(this,Manifest.permission.CAMERA);
 
+
         ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_PHONE_STATE,Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE
         ,Manifest.permission.ACCESS_NETWORK_STATE,Manifest.permission.CAMERA}, 1);
 
