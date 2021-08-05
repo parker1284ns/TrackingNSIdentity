@@ -359,3 +359,5 @@ public class CapturaEvidenciaActivity extends AppCompatActivity {
 
 
 }
+
+//editado por Diego
