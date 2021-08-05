@@ -192,7 +192,8 @@
         android:layout_marginTop="10dp"
         android:textColor="#ffffff"
         android:background="#F40A0A"
-        android:text="Guardar" />
+        android:text="Guardar"
+        android:onClick="GuardarEnservidorPrueba"/>
 
 
 

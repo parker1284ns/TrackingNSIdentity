@@ -6,9 +6,13 @@ public class objEvidencia {
     //nota string
 
     //evidencia_id-int
-    public int evidenica_id;
+    public int evidencia_id;
     //foto-string imagen en base 64
     public String imagen;
     //nota string
     public String nota;
+    //Imei string
+    public String imei;
+    //fecha de captura
+    public String fecha_captura;
 }

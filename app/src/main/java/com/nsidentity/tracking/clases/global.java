@@ -1,19 +1,24 @@
 package com.nsidentity.tracking.clases;
 
 import android.Manifest;
+import android.app.Application;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
+import android.util.Base64;
+import android.widget.Toast;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
 
 import com.nsidentity.tracking.MyService;
 
+import java.io.ByteArrayOutputStream;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -102,8 +107,23 @@ public class global {
     public String version = "2.0.2";
 
 
+  public String ObtenerFecha(){
+      SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
+      Date date = new Date();
+      String fecha = dateFormat.format(date);
+      return fecha;
+  }
 
-
-
+ public String GetImagenBase64(Bitmap bitmap){
+      String imagen;
+      float proporcionancho = 400 / (float) bitmap.getWidth();
+     float proporcionalto = 400 / (float) bitmap.getHeight();
+     Bitmap resize = Bitmap.createScaledBitmap(bitmap,(int) (bitmap.getWidth()*proporcionancho), (int) (bitmap.getHeight()*proporcionalto),true);
+     ByteArrayOutputStream b = new ByteArrayOutputStream();
+     resize.compress(Bitmap.CompressFormat.JPEG,70,b);
+     byte[] imagenB = b.toByteArray();
+     imagen = Base64.encodeToString(imagenB,Base64.DEFAULT);
+     return imagen;
+ }
 
 }

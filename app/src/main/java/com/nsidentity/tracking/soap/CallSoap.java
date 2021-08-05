@@ -103,14 +103,15 @@ public class CallSoap extends CallSoapBase
         return ret;
     }
 
-    public EBreturn SalvaEvidencia(int evidicena_id,String imagen,String nota){
+    public EBreturn SalvaEvidencia(int evidencia_id,String imagen,String nota,String fecha_captura,String imei){
         String mensaje="";
 
         pSalvaEvidencia parametros= new pSalvaEvidencia();
-        parametros.evidencia_id = evidicena_id;
+        parametros.evidencia_id = evidencia_id;
         parametros.imagen = imagen;
         parametros.nota = nota;
-
+        parametros.fecha_captura = fecha_captura;
+        parametros.imei = imei;
 
         try
         {
