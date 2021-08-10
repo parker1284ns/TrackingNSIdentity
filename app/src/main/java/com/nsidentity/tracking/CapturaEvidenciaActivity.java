@@ -11,7 +11,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.graphics.drawable.BitmapDrawable;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -326,24 +328,93 @@ public class CapturaEvidenciaActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if(requestCode == 1 && resultCode == RESULT_OK){
             //Bundle extras = data.getExtras();
-            Bitmap imgBitmap = BitmapFactory.decodeFile(RutaImagen);
-            imagen1.setBackground(null);
-            imagen1.setImageBitmap(imgBitmap);
-            Toast.makeText(this, "Evidencia capturada", Toast.LENGTH_SHORT).show();
+            try {
+                Bitmap imgBitmap = BitmapFactory.decodeFile(RutaImagen);
+                ExifInterface exif = new ExifInterface(RutaImagen);
+                int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_UNDEFINED);
+                Matrix matrix = new Matrix();
+
+                switch (orientation){
+                    case ExifInterface.ORIENTATION_ROTATE_90:
+                        matrix.postRotate(90);
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_180:
+                        matrix.postRotate(180);
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_270:
+                        matrix.postRotate(270);
+                        break;
+                    default:
+                        break;
+                }
+                imagen1.setBackground(null);
+                imagen1.setImageBitmap(imgBitmap);
+
+                Toast.makeText(this, "Evidencia capturada", Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
         if(requestCode == 2 && resultCode == RESULT_OK){
             //Bundle extras = data.getExtras();
-            Bitmap imgBitmap = BitmapFactory.decodeFile(RutaImagen);
-            imagen2.setBackground(null);
-            imagen2.setImageBitmap(imgBitmap);
-            Toast.makeText(this, "Evidencia capturada", Toast.LENGTH_SHORT).show();
+            try {
+                Bitmap imgBitmap = BitmapFactory.decodeFile(RutaImagen);
+                ExifInterface exif = new ExifInterface(RutaImagen);
+                int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_UNDEFINED);
+                Matrix matrix = new Matrix();
+
+                switch (orientation){
+                    case ExifInterface.ORIENTATION_ROTATE_90:
+                        matrix.postRotate(90);
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_180:
+                        matrix.postRotate(180);
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_270:
+                        matrix.postRotate(270);
+                        break;
+                    default:
+                        break;
+                }
+                imagen2.setBackground(null);
+                imagen2.setImageBitmap(imgBitmap);
+
+                Toast.makeText(this, "Evidencia capturada", Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
         if(requestCode == 3 && resultCode == RESULT_OK){
-            //Bundle extras = data.getExtras();
-            Bitmap imgBitmap = BitmapFactory.decodeFile(RutaImagen);
-            imagen3.setBackground(null);
-            imagen3.setImageBitmap(imgBitmap);
-            Toast.makeText(this, "Evidencia capturada", Toast.LENGTH_SHORT).show();
+            try {
+                Bitmap imgBitmap = BitmapFactory.decodeFile(RutaImagen);
+                ExifInterface exif = new ExifInterface(RutaImagen);
+                int orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_UNDEFINED);
+                Matrix matrix = new Matrix();
+
+                switch (orientation){
+                    case ExifInterface.ORIENTATION_ROTATE_90:
+                        matrix.postRotate(90);
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_180:
+                        matrix.postRotate(180);
+                        break;
+                    case ExifInterface.ORIENTATION_ROTATE_270:
+                        matrix.postRotate(270);
+                        break;
+                    default:
+                        break;
+                }
+                imagen3.setBackground(null);
+                imagen3.setImageBitmap(imgBitmap);
+
+                Toast.makeText(this, "Evidencia capturada", Toast.LENGTH_SHORT).show();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+
         }
 
     }
